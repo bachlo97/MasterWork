@@ -1,0 +1,149 @@
+/* GLOBAL */
+/** color variables */
+@import url("devCuong.css");
+@import url("devSon.css");
+@import url("devTrung.css");
+
+/* @font-face {
+    font-family: 'FontAwesome';
+    src: url("../fonts/fontawesome-webfont.eot?v=4.7.0");
+    src: url("../fonts/fontawesome-webfont.eot?#iefix&v=4.7.0") format("embedded-opentype"), url("../fonts/fontawesome-webfont.woff2?v=4.7.0") format("woff2"), url("../fonts/fontawesome-webfont.woff?v=4.7.0") format("woff"), url("../fonts/fontawesome-webfont.ttf?v=4.7.0") format("truetype"), url("../fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular") format("svg");
+    font-weight: normal;
+    font-style: normal; 
+} */
+
+:root {
+    --primary: #dc4f72;
+    --secondary: #0d5fa8;
+    --title-color: #2C3038;
+    --text-color: #5a5a5a;
+    --border-color: #eee;
+    --bg-lightgrey: #f7f7f7;
+    --border-color-light: #d0d0d0;
+    --bg-color: #fff;
+    --iframe-filter : grayscale(0%);
+    --light-bg-color: #F7F9FC;
+    --card-curve: 6px;
+    --card-hover-box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.09);
+    --transformY: translateY(-0.5rem);
+    --card-box-shadow: 1px 5px 7.5px rgba(14, 13, 13, 0.2);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #fff; 
+} 
+
+
+ul,
+ol {
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*? reset the tags automatically set up by bootstrap */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem; 
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2; 
+}      
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif; 
+}   
+
+h3 {
+    margin-bottom: 0;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+h4{
+    font-size: 18px;
+    color: var(--primary);
+    font-weight: 400;
+    line-height: 1.2
+}
+
+.btn{
+    display: inline-block;
+    line-height: 52px;
+    font-weight: 700;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px 30px;
+    text-transform: uppercase;
+    color: #dc4f72;
+    text-align: center;
+    vertical-align: middle;
+    background-color: transparent;
+    border-radius: 0.25rem;
+    border: 1px solid #dc4f72;
+    transition: 0.3s ease-out;
+}
+
+.btn:hover{
+    color: #fff;
+    background-color: #dc4f72;
+    border-color: #dc4f72;
+}
+
+.btn:focus{
+    box-shadow: 0 0 0 0.2rem rgba(220, 79, 114, 0.5);
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; 
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px; 
+}
