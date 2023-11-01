@@ -1,16 +1,146 @@
 /* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 100;
+    background-color: var(--bg-color);
+    padding: 0px;
+    transition: all 0.4s ease 0s;
+    height: 90px;
+    display: grid;
+    align-items: center;
+    box-shadow: 0 3px 9px rgba(0, 0, 0, 0.05);
+}
+
 header .container {
     max-width: 1200px;
     padding-right: 25px;
     padding-left: 25px;
 }
 
+header .navbar {
+    padding: 0;
+}
 
 
 
-header .dropdown-toggle::after{
+header .dropdown-toggle::after {
     display: none;
 }
+
+
+header .navbar-brand {
+    margin: 0;
+    padding: 0;
+    font-size: 26px;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: -1px;
+    color: var(--primary);
+}
+
+header .navbar-brand:hover {
+    color: var(--primary);
+}
+
+
+header .navbar-nav .nav-item {
+    padding: 0 15px;
+}
+
+header .navbar-nav .nav-item.dropdown i {
+    position: absolute;
+    right: 1px;
+    top: 19px;
+    display: inline-block;
+    content: "";
+    color: var(--title-color);
+}
+
+header .navbar-nav .nav-item .nav-link {
+    text-transform: capitalize;
+    transition: all 0.5s ease;
+    padding: 14px 0;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--title-color);
+}
+
+header .navbar-nav .nav-item .nav-link:hover {
+    color: var(--primary);
+}
+
+header .navbar-nav .nav-item .nav-link::before {
+    position: absolute;
+    content: '';
+    background: var(--primary);
+    width: 0px;
+    height: 2px;
+    bottom: 13px;
+    transition: all .5s;
+}
+
+header .navbar-nav .nav-item .nav-link:hover::before {
+    width: 20px;
+}
+
+header .navbar-nav .nav-item.active .nav-link {
+    color: var(--primary);
+}
+
+header .search-right a span {
+    color: var(--text-color);
+    font-size: 15px;
+    opacity: .7;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    background: var(--light-bg-color);
+    text-align: center;
+    border-radius: 50px;
+    border: 1px solid var(--border-color);
+}
+
+header .navbar .DarkandLight input {
+    display: none;
+}
+
+header .navbar .DarkandLight .mode-container {
+    width: 24px;
+    height: 24px;
+    padding: 0px 1vw;
+}
+
+
+header .navbar .DarkandLight .mode-container .gg-moon {
+    display: block;
+    overflow: hidden;
+    position: relative;
+    transform: rotate(-135deg) scale(var(--ggs, 1));
+    width: 20px;
+    height: 20px;
+    border: 2px solid;
+    border-bottom: 2px solid transparent;
+    border-radius: 50%;
+    font-style: italic;
+}
+
+header .navbar .DarkandLight .mode-container .gg-moon:after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 18px;
+    border: 2px solid transparent;
+    box-shadow: 0 0 0 2px;
+    top: 8px;
+    left: 2px;
+    display: block;
+    box-sizing: border-box;
+    border-radius: 50%;
+}
+
 
 
 /* FEATURE */
@@ -436,7 +566,7 @@ footer .footer__bottom .social li a:hover {
 
 }
 
-.backToTop:hover{
+.backToTop:hover {
     opacity: 1;
 }
 
@@ -476,6 +606,67 @@ footer .footer__bottom .social li a:hover {
 }
 
 @media screen and (max-width:991px) {
+
+    /* HEADER */
+
+    header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    header .navbar .DarkandLight {
+        position: absolute;
+        right: 66px;
+        top: 20px;
+    }
+
+    header .navbar .navbar-toggler {
+        line-height: 1;
+        background-color: transparent;
+        border-radius: 0.25rem;
+        border: 0 none;
+        font-size: 24px;
+    }
+
+    header .navbar .navbar-toggler:focus {
+        box-shadow: none;
+        padding: 0;
+        outline: 1px dotted;
+    }
+
+    header .navbar .navbar-toggler-icon.fa {
+        color: #fff;
+        line-height: 34px;
+        background-color: var(--primary);
+        border-radius: 5px;
+        background-image: none;
+    }
+
+
+    header button.navbar-toggler.collapsed .icon-expand {
+        display: block;
+    }
+
+    header button.navbar-toggler.collapsed .icon-close {
+        display: none;
+    }
+
+    header button.navbar-toggler .icon-expand {
+        display: none;
+    }
+
+    header button.navbar-toggler .icon-close {
+        display: block;
+    }
+
+    header .navbar .DarkandLight {
+        top: 12px;
+    }
+
+
+
+
+    /* FOOTER */
     .footer__bottom {
         display: block !important;
     }
@@ -483,6 +674,7 @@ footer .footer__bottom .social li a:hover {
     .footer__bottom .FooterSocial {
         text-align: center;
     }
+
 }
 
 @media screen and (max-width:800px) {
